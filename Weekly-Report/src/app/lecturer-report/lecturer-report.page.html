@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Lecturer Weekly Report
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <form [formGroup]="todo" (ngSubmit)="logForm()">
+        <ion-item>
+            <ion-label position="floating">Responsible Lecturer</ion-label>
+            <ion-input value="Dr Tendani Lavhengwa" readonly placeholder="Responsible Lecturer"></ion-input>
+
+            <ion-label position="floating">Qualification</ion-label>
+            <ion-input value="Diploma: Informatics" readonly placeholder="Qualification"></ion-input>
+
+            <ion-label position="floating">Module Name and Code</ion-label>
+            <ion-input value="BCM125D - Business Cost Management" readonly placeholder="Module Name and Code"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Number of Students</ion-label>
+            <ion-input type="number" required [(ngModel)]="report.numStudents" ngControl="numStudents"></ion-input>
+
+            <ion-label position="floating">Week no. and Date</ion-label>
+
+            <ion-label position="floating">Topic(s) covered</ion-label>
+            <ion-textarea> </ion-textarea>
+
+            <ion-label position="floating">Mode of Teaching Used</ion-label>
+            <ion-input></ion-input>
+
+            <ion-label position="floating">Mode of Presentation</ion-label>
+            <ion-input></ion-input>
+
+            <ion-label position="floating">Resources Used</ion-label>
+            <ion-input></ion-input>
+
+            <ion-label position="floating">Avg Number of Students Present</ion-label>
+            <ion-input></ion-input>
+
+            <ion-label position="floating">Activities</ion-label>
+            <ion-textarea></ion-textarea>
+
+            <ion-label position="floating">Assessments</ion-label>
+            <ion-textarea></ion-textarea>
+
+            <ion-label position="floating">Challenges and/or Recommendations</ion-label>
+            <ion-textarea></ion-textarea>
+
+            <ion-button color="secondary">Submit</ion-button>
+
+        </ion-item>
+    </form>
+
+</ion-content>
